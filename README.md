@@ -92,3 +92,25 @@ module.exports = {
 ```
 
 配置名是插件配置的 configs 属性定义的，这里的配置其实就是 ESLint 的扩展，通过这种方式即可以加载插件，又可以加载扩展。
+
+#### 规则（rules）
+
+根据实际团队或者项目情况，自定义 lint 规则，这里的规则会覆盖上面`extends`和`plugins`的规则，权重最大。
+
+```
+// 可以根据团队或者项目自己去扩展
+rules: {
+    "no-console": 1, // 不禁用console
+    "react/jsx-uses-react": 2, // 防止反应被错误地标记为未使用
+    "@typescript-eslint/no-var-requires": 0,
+    quotes: [2, "double"],
+    "linebreak-style": 0,
+    "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }],
+    semi: ["error", "always"]
+  },
+```
+
+- 为什么使用@babel/eslint-parser
+  ESLint 的默认解析器和核心规则只支持最新的最终 ECMAScript 标准，不支持 Babel 提供的实验性（如新特性）和 non-standard（如流或 TypeScript 类型）语法。@babel/eslint-parser 是一个解析器，它允许 ESLint 在 Babel 转换的源代码上运行。ESLint 允许使用自定义解析器。使用此插件时，代码将由 Babel 的解析器（使用 Babel 配置文件中指定的配置）解析，并将生成的 AST 转换为 ESLint 可以理解的 ESTree 兼容结构。所有的位置信息，如行号，列也会被保留，这样您就可以轻松地跟踪错误。
+
+具体的可看[npm 的描述](https://www.npmjs.com/package/@babel/eslint-parser)
