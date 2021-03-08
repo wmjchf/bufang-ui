@@ -21,8 +21,7 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin({
-      // 自动修复
-      fix: true
+      extensions: [".tsx", ".ts", ".js"]
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
