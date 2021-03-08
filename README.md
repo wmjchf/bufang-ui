@@ -2,6 +2,8 @@
 
 - error: Cannot find module 'webpack-cli/bin/config-yargs', webpack-cli 和 webpack-dev-server 不兼容。
 
+![image](https://user-images.githubusercontent.com/36124772/110301011-90250f00-8032-11eb-907f-13ff23d7cb4d.png)
+
 ```
 解决办法：
    1、修改package.json中的script
