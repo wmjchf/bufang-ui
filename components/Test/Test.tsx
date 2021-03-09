@@ -1,5 +1,8 @@
 import React from "react";
-import { TestInterface } from "./interface";
+
+export interface TestInterface {
+  title: string;
+}
 
 const prefixCls = "happy-alert";
 

@@ -19,7 +19,7 @@ site/theme/template/Resources/*.jsx
 site/theme/template/Resources/**/*.jsx
 site/theme/template/NotFound.jsx
 typings
-es/**/*
+esm/**/*
 lib/**/*
 node_modules
 _site
@@ -29,3 +29,4 @@ coverage
 # Scripts
 scripts/previewEditor/**/*
 jest-stare
+gulpfile.js

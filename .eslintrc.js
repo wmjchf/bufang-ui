@@ -21,13 +21,11 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "react"],
   rules: {
-    "no-console": 1, // 不禁用console
-    "react/jsx-uses-react": 2, // 防止反应被错误地标记为未使用
-    "@typescript-eslint/no-var-requires": 0,
     quotes: [2, "double"],
+    semi: ["error", "always"],
+    "react/jsx-uses-react": 2, // 防止反应被错误地标记为未使用
     "linebreak-style": 0,
-    "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }],
-    semi: ["error", "always"]
+    "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }]
   },
   settings: {
     react: {
