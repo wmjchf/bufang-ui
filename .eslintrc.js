@@ -24,10 +24,7 @@ module.exports = {
     ecmaVersion: 7
   },
   plugins: ["@typescript-eslint", "react"],
-  rules: {
-    quotes: [2, "double"], // 双引号
-    semi: ["error", "always"] // 一行语句结束要有分号
-  },
+  rules: {},
   settings: {
     react: {
       version: "detect"
