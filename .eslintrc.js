@@ -4,7 +4,11 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  extends: ["eslint:recommended", "airbnb", "standard"], // 扩展的规则
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+  ], // 扩展的规则
   globals: {
     $: true,
     process: true,
@@ -21,11 +25,8 @@ module.exports = {
   },
   plugins: ["@typescript-eslint", "react"],
   rules: {
-    quotes: [2, "double"],
-    semi: ["error", "always"],
-    "react/jsx-uses-react": 2, // 防止反应被错误地标记为未使用
-    "linebreak-style": 0,
-    "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }]
+    quotes: [2, "double"], // 双引号
+    semi: ["error", "always"] // 一行语句结束要有分号
   },
   settings: {
     react: {
