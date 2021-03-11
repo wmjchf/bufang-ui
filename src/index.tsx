@@ -1,4 +1,5 @@
 import React from "react";
 import ReactDom from "react-dom";
+import { Test } from "bufang-ui";
 
-ReactDom.render(<div>HELLO</div>, document.getElementById("root"));
+ReactDom.render(<Test title="hello" />, document.getElementById("root"));

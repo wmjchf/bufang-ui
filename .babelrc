@@ -1,9 +1,6 @@
 {
   "presets": ["@babel/preset-env", "@babel/preset-typescript", "@babel/preset-react"],
-  "plugins": [
-    "@babel/plugin-transform-runtime",
-    "@babel/proposal-class-properties"
-  ],
+  "plugins": ["@babel/plugin-transform-runtime", "@babel/proposal-class-properties"],
   "env": {
     "esm": {
       "presets": [

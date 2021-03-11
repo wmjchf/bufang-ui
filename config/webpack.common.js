@@ -11,6 +11,12 @@ module.exports = {
     // 文件名称
     filename: "bundle.js"
   },
+  resolve: {
+    alias: {
+      "bufang-ui": path.resolve(__dirname, "../components")
+    },
+    extensions: [".ts", ".tsx", ".js"]
+  },
   module: {
     rules: [
       {

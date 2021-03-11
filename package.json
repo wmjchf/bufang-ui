@@ -1,7 +1,7 @@
 {
   "name": "wang-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "wang-ui",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "typings": "lib/index.d.ts",

@@ -6,12 +6,10 @@ export interface TestInterface {
 
 const prefixCls = "happy-alert";
 
-const Test: React.FC<TestInterface> = ({ title }: TestInterface) => (
+export const Test: React.FC<TestInterface> = ({ title }: TestInterface) => (
   <div className={prefixCls}>{title}</div>
 );
 
 Test.defaultProps = {
   title: ""
 };
-
-export default Test;

@@ -24,6 +24,7 @@ lib/**/*
 node_modules
 _site
 dist
+config
 coverage
 **/*.d.ts
 # Scripts
