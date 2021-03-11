@@ -78,9 +78,13 @@
     "react-router-dom": "^5.2.0"
   },
   "sideEffects": [
-    "es/**/style/*",
+    "esm/**/style/*",
     "lib/**/style/*",
     "*.less"
+  ],
+  "files": [
+    "lib",
+    "esm"
   ],
   "husky": {
     "hooks": {
