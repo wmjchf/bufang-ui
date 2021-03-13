@@ -2,5 +2,6 @@ node_modules
 lib
 esm
 dumi/.umi
+dumi/dist
 dumi/node_modules
 .umi
