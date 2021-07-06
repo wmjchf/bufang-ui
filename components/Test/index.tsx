@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export interface TestInterface {
   title: string;
@@ -6,9 +6,11 @@ export interface TestInterface {
 
 const prefixCls = "happy-alert";
 
-const Test: React.FC<TestInterface> = ({ title }: TestInterface) => (
-  <div className={prefixCls}>{title}</div>
-);
+const Test: React.FC<TestInterface> = ({ title }: TestInterface) => {
+  // 填充的padding
+
+  return <div className={prefixCls}>{title}</div>;
+};
 
 Test.defaultProps = {
   title: ""

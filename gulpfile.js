@@ -1,9 +1,17 @@
 const gulp = require("gulp");
 const babel = require("gulp-babel");
 const less = require("gulp-less");
+const postcss = require("gulp-postcss");
+const pxtoviewport = require("postcss-px-to-viewport");
 const autoprefixer = require("gulp-autoprefixer");
 const cssnano = require("gulp-cssnano");
 const through2 = require("through2");
+
+const processors = pxtoviewport({
+  viewportWidth: 800,
+  viewportHeight: 450,
+  viewportUnit: "vw"
+});
 
 const paths = {
   dest: {
@@ -69,7 +77,7 @@ function less2css() {
   return gulp
     .src(paths.styles)
     .pipe(less()) // 处理less文件
-    .pipe(autoprefixer()) // 根据browserslistrc增加前缀
+    .pipe(postcss([autoprefixer, processors]))
     .pipe(cssnano({ zindex: false, reduceIdents: false })) // 压缩
     .pipe(gulp.dest(paths.dest.lib))
     .pipe(gulp.dest(paths.dest.esm));
